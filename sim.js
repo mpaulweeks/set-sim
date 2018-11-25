@@ -55,7 +55,7 @@ class Simulator {
       const sizeKey = 'ended-with-' + pool.length.toString().padStart(2, '0');
       const firstKey = 'first-sets-' + firstSets.length.toString().padStart(2, '0');
       stats = mergeObjs(stats, {
-        total: 1,
+        'total-games': 1,
         [sizeKey]: 1,
         [firstKey]: 1,
         'ended-06-with-triple-set': this.checker.checkTripleInterset(pool) || 0,
