@@ -16,17 +16,22 @@ body {
 h1 {
   margin-bottom: 0;
 }
-#container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-section {
-  padding: 10px;
+
+table {
   margin: 10px;
+  font-family: monospace;
+  border-collapse: collapse;
+}
+table, th, td {
   border: 1px solid black;
 }
-pre {
+th, td {
+  padding: 2px;
+}
+td {
+  text-align: right;
+}
+td:first-child {
   text-align: left;
 }
   </style>
@@ -36,14 +41,13 @@ pre {
   <div>
     <a href="https://github.com/mpaulweeks/set-sim/">source code</a>
   </div>
-  <div id="container">
-    <section>
-      <h3> raw data </h3>
-      <pre id="output"></pre>
-    </section>
-    <section>
-      <h3> percentages </h3>
-      <pre id="percent"></pre>
-    </section>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>stat</th>
+        <th>percent</th>
+        <th>actual</th>
+      </tr>
+    </thead>
+    <tbody id="output"></tbody>
 </body>
