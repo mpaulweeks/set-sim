@@ -1,27 +1,41 @@
 <head>
-  <script defer src="tool.js"></script>
-  <script defer src="check.js"></script>
-  <script defer src="model.js"></script>
-  <script defer src="sim.js"></script>
-  <script defer src="main.js"></script>
+  <script defer src="tool.js?v=20181125v1"></script>
+  <script defer src="check.js?v=20181125v1"></script>
+  <script defer src="model.js?v=20181125v1"></script>
+  <script defer src="sim.js?v=20181125v1"></script>
+  <script defer src="main.js?v=20181125v1"></script>
 
   <style type="text/css">
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin-bottom: 0;
+}
 #container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 section {
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
 }
-h3 {
-  text-align: center;
+pre {
+  text-align: left;
 }
   </style>
 </head>
 <body>
   <h1>set simulation</h1>
+  <div>
+    <a href="https://github.com/mpaulweeks/set-sim/">source code</a>
+  </div>
   <div id="container">
     <section>
       <h3> raw data </h3>
