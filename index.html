@@ -4,8 +4,32 @@
   <script defer src="model.js"></script>
   <script defer src="sim.js"></script>
   <script defer src="main.js"></script>
+
+  <style type="text/css">
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+section {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+h3 {
+  text-align: center;
+}
+  </style>
 </head>
 <body>
   <h1>set simulation</h1>
-  <pre id="output"></pre>
+  <div id="container">
+    <section>
+      <h3> raw data </h3>
+      <pre id="output"></pre>
+    </section>
+    <section>
+      <h3> percentages </h3>
+      <pre id="percent"></pre>
+    </section>
+  </div>
 </body>

@@ -50,7 +50,8 @@ class Checker {
     let sum = a.key + b.key + c.key;
     return !!this.setSolutions[sum];
   }
-  checkCards(pool){
+  checkPoolForAllSets(pool, exitEarly){
+    let sets = [];
     for (let a = 0; a < pool.length; a++){
       let cardA = pool[a];
       for (let b = a + 1; b < pool.length; b++){
@@ -59,12 +60,18 @@ class Checker {
           let cardC = pool[c];
           const success = this.checkSet(cardA, cardB, cardC);
           if (success){
-            return [a, b, c];
+            sets.push([a, b, c]);
+            if (exitEarly) {
+              return sets;
+            }
           }
         }
       }
     }
-    return null;
+    return sets;
+  }
+  checkPoolForSet(pool){
+    return this.checkPoolForAllSets(pool, true)[0];
   }
   checkTripleInterset(pool){
     if (pool.length !== 6){
