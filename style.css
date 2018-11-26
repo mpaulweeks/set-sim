@@ -1,0 +1,91 @@
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin-bottom: 0;
+}
+
+table {
+  margin: 10px;
+  font-family: monospace;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 2px;
+}
+td {
+  text-align: right;
+}
+td:first-child {
+  text-align: left;
+}
+
+/* styling cards */
+.set {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 80px;
+  height: 50;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 20px;
+}
+.card > span {
+  margin: 0px 3px;
+}
+.symbol-0::after {
+  content: '⬯';
+}
+.symbol-0.shading-2::after {
+  content: '⬮';
+}
+.symbol-1::after {
+  content: '⬨';
+}
+.symbol-1.shading-2::after {
+  content: '⬧';
+}
+.symbol-2 {
+  margin: inherit -10px;
+  font-size: 0.8em;
+}
+.symbol-2::after {
+  content: '◻';
+}
+.symbol-2.shading-2::after {
+  content: '◼';
+}
+.shading-1 {
+  text-decoration: line-through;
+}
+.color-0 {
+  color: red;
+}
+.color-1 {
+  color: blue;
+}
+.color-2 {
+  color: green;
+}

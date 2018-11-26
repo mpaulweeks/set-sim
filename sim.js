@@ -14,26 +14,24 @@ class Simulator {
 
     let set = null;
     while (true) {
+      // fill the pool up to 12
       while (pool.length < 12 && deck.length > 0) {
         pool.push(deck.pop());
       }
       pool = shuffle(pool);
       set = this.checker.checkPoolForSet(pool);
-      if (!set && deck.length > 0){
-        // go to 15
+
+      // if no set, keep adding three until we find a set or run out of cards
+      while (!set && deck.length > 0){
         pool.push(deck.pop());
         pool.push(deck.pop());
         pool.push(deck.pop());
         pool = shuffle(pool);
         set = this.checker.checkPoolForSet(pool);
-      }
-      if (!set && deck.length > 0){
-        // go to 18
-        pool.push(deck.pop());
-        pool.push(deck.pop());
-        pool.push(deck.pop());
-        pool = shuffle(pool);
-        set = this.checker.checkPoolForSet(pool);
+        if (!set && pool.length >= 15){
+          displayInterestingPool(pool);
+          throw 'fuck';
+        }
       }
       if (!set){
         break;

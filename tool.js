@@ -37,3 +37,10 @@ function mergeObjs(a, b){
 function getPercent(numer, denom){
   return (100 * numer / denom).toFixed(10).padStart(13, '0');
 }
+
+function displayInterestingPool(pool){
+  const html = pool.map(c => c.html).join('');
+  document.getElementById('output').innerHTML += `
+    <div class="set">${html}</div>
+  `;
+}

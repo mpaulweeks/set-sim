@@ -14,7 +14,7 @@ function displayMaster(master){
   percentages['06-with-triple-set'] = getPercent(actual['ended-06-with-triple-set'], actual['ended-with-06']);
 
   const keys = Object.keys(percentages).sort();
-  document.getElementById('output').innerHTML = keys.map(key => `
+  document.getElementById('stats').innerHTML = keys.map(key => `
     <tr>
       <td>${key.split('-').join(' ')}</td>
       <td>${percentages[key] || ''}</td>

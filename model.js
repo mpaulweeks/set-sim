@@ -11,6 +11,11 @@ class Card {
          1 * color
     );
     this.display = this.key.toString().padStart(4, '0');
+    const symbolHTML = `
+      <span class="symbol-${symbol} shading-${shading} color-${color}">
+      </span>
+    `.repeat(number + 1);
+    this.html = `<div class="card">${symbolHTML}</div>`;
   }
 }
 

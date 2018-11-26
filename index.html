@@ -1,42 +1,14 @@
+<html>
 <head>
+  <title>Set Simulations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css?v=20181125v2"/>
   <script defer src="tool.js?v=20181125v2"></script>
   <script defer src="check.js?v=20181125v2"></script>
   <script defer src="model.js?v=20181125v2"></script>
   <script defer src="sim.js?v=20181125v2"></script>
   <script defer src="main.js?v=20181125v2"></script>
-
-  <title>Set Simulations</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style type="text/css">
-body {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-h1 {
-  margin-bottom: 0;
-}
-
-table {
-  margin: 10px;
-  font-family: monospace;
-  border-collapse: collapse;
-}
-table, th, td {
-  border: 1px solid black;
-}
-th, td {
-  padding: 2px;
-}
-td {
-  text-align: right;
-}
-td:first-child {
-  text-align: left;
-}
-  </style>
 </head>
 <body>
   <h1>set simulation</h1>
@@ -51,5 +23,8 @@ td:first-child {
         <th>actual</th>
       </tr>
     </thead>
-    <tbody id="output"></tbody>
+    <tbody id="stats"></tbody>
+  </table>
+  <div id="output"></div>
 </body>
+</html>
