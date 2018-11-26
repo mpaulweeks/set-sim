@@ -28,9 +28,8 @@ class Simulator {
         pool.push(deck.pop());
         pool = shuffle(pool);
         set = this.checker.checkPoolForSet(pool);
-        if (!set && pool.length >= 15){
+        if (!set && pool.length >= 18){
           displayInterestingPool(pool);
-          throw 'fuck';
         }
       }
       if (!set){

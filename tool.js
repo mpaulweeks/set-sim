@@ -41,6 +41,11 @@ function getPercent(numer, denom){
 function displayInterestingPool(pool){
   const html = pool.map(c => c.html).join('');
   document.getElementById('output').innerHTML += `
-    <div class="set">${html}</div>
+    <div class="set">
+      <h3>found ${pool.length} cards without a set</h3>
+      <div class="pool">
+        ${html}
+      </div>
+    </div>
   `;
 }
